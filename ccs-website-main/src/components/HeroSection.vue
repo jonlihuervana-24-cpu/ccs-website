@@ -27,76 +27,110 @@ import logoImg from '@/assets/images/ccs-logo.png'
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6rem 3rem;
-  background: linear-gradient(180deg, #a1aba4 0%, #ffffff 100%);
+  padding: 4rem 1.5rem;
+  background: radial-gradient(circle at top, #eaebeb 0%, #ffffff 100%);
   text-align: center;
   scroll-margin-top: 100px;
 }
 
-.hero-content {
-  max-width: 1200px;
-  margin: 0 auto;
+.container {
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .hero-logo {
-  width: 260px;
-  height: 260px;
+  width: 180px;
+  height: 180px;
   object-fit: contain;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.08));
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: translateY(-4px);
 }
 
 .hero h1 {
-  color: #3b423e;
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
+  color: #1e293b;
+  font-size: clamp(2.2rem, 5vw, 3.75rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+  line-height: 1.15;
 }
 
 .motto {
-  color: #475569;
-  font-size: 1.3rem;
-  margin-bottom: 3rem;
+  color: #64748b;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  max-width: 600px;
+  margin-bottom: 3.5rem;
+  line-height: 1.6;
 }
 
 .values {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.8rem;
-  flex-wrap: nowrap;
-  white-space: nowrap;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .values span {
-  color: #3b423e;
-  font-weight: 900;
-  font-size: 1.3rem;
-  padding: 0.8rem 1.2rem;
+  color: #334155;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.6rem 1.2rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-bottom: 3px solid #b8860b;
-  letter-spacing: 2px;
+  border-radius: 8px;
+  letter-spacing: 1.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.values span:hover {
+  border-bottom-color: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
 @media (max-width: 900px) {
-  .hero h1 {
-    font-size: 2.8rem;
+  .hero {
+    padding: 3rem 1rem;
   }
-  .values {
-    gap: 1rem;
-  }
-  .values span {
-    font-size: 1rem;
-    padding: 0.6rem 0.8rem;
-  }
+  
   .hero-logo {
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1.5rem;
+  }
+
+  .motto {
+    margin-bottom: 2.5rem;
   }
 }
 
 @media (max-width: 600px) {
   .values {
-    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .values span {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.85rem;
+    letter-spacing: 1px;
   }
 }
 </style>

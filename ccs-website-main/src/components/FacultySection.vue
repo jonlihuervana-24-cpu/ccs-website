@@ -6,41 +6,53 @@
         <h2>Faculty & Staff</h2>
         <div class="gold-line"></div>
       </div>
+
       <div class="group">
         <h3 class="group-title">College Dean</h3>
         <div class="card-row single">
-          <div class="person-card">
-            <img :src="deanImg" alt="Dean Quijano" />
+          <div class="person-card dean-card">
+            <div class="avatar-wrapper">
+              <img :src="deanImg" alt="Dean Quijano" />
+            </div>
             <h4>Ma. Christina A. Quijano, MSCS</h4>
             <p class="role">College Dean</p>
           </div>
         </div>
       </div>
+
       <div class="group">
         <h3 class="group-title">Department Heads & Coordinators</h3>
         <div class="card-row">
           <div class="person-card" v-for="(p, i) in heads" :key="i">
-            <img :src="getImg(p.img)" :alt="p.name" />
+            <div class="avatar-wrapper">
+              <img :src="getImg(p.img)" :alt="p.name" />
+            </div>
             <h4>{{ p.name }}</h4>
             <p class="role">{{ p.role }}</p>
           </div>
         </div>
       </div>
+
       <div class="group">
         <h3 class="group-title">Faculty Members</h3>
         <div class="card-row">
           <div class="person-card" v-for="(p, i) in faculty" :key="i">
-            <img :src="getImg(p.img)" :alt="p.name" />
+            <div class="avatar-wrapper">
+              <img :src="getImg(p.img)" :alt="p.name" />
+            </div>
             <h4>{{ p.name }}</h4>
             <p class="role">{{ p.duty }}</p>
           </div>
         </div>
       </div>
+
       <div class="group">
         <h3 class="group-title">Administrative Staff</h3>
         <div class="card-row">
           <div class="person-card" v-for="(p, i) in staff" :key="i">
-            <img :src="getImg(p.img)" :alt="p.name" />
+            <div class="avatar-wrapper">
+              <img :src="getImg(p.img)" :alt="p.name" />
+            </div>
             <h4>{{ p.name }}</h4>
             <p class="role">{{ p.position }}</p>
           </div>
@@ -84,90 +96,170 @@ const staff = ref([
 
 <style scoped>
 .faculty {
-  padding: 6rem 3rem;
-  background: #dfdfdf;
+  padding: 6rem 1.5rem;
+  background: #f8fafc;
   scroll-margin-top: 80px;
 }
+
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
+
 .section-header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
+
 .subheading {
   color: #b8860b;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
-  margin: 0 0 0.8rem;
-  font-size: 1.4rem;
-}
-h2 {
-  color: #3b423e;
-  font-size: 3rem;
+  text-transform: uppercase;
   margin: 0 0 0.5rem;
+  font-size: 0.875rem;
 }
+
+h2 {
+  color: #1e293b;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin: 0 0 1rem;
+}
+
 .gold-line {
-  width: 120px;
-  height: 4px;
+  width: 60px;
+  height: 3px;
   background: #b8860b;
   margin: 0 auto;
+  border-radius: 2px;
 }
+
 .group {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
+
+.group:last-child {
+  margin-bottom: 0;
+}
+
 .group-title {
-  color: #3b423e;
-  font-size: 1.6rem;
-  margin-bottom: 2.5rem;
-  padding-bottom: 0.8rem;
-  border-bottom: 3px solid #b8860b;
+  color: #1e293b;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  position: relative;
 }
+
+.group-title::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #b8860b;
+}
+
 .card-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem;
+  gap: 1.5rem;
   width: 100%;
 }
+
 .card-row.single {
   grid-template-columns: 1fr;
-  max-width: 350px;
+  max-width: 320px;
   margin: 0 auto;
 }
+
 .person-card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 2.5rem;
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 2rem 1.25rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(20, 83, 45, 0.08);
-  height: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.person-card img {
-  width: 140px;
-  height: 140px;
+
+.person-card:hover {
+  transform: translateY(-4px);
+  border-color: #e2e8f0;
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+}
+
+.dean-card {
+  border-top: 3px solid #b8860b;
+}
+
+.avatar-wrapper {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  padding: 3px;
+  border: 2px solid #e2e8f0;
+  margin-bottom: 1.25rem;
+  transition: border-color 0.3s ease;
+}
+
+.person-card:hover .avatar-wrapper {
+  border-color: #b8860b;
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 1.5rem;
 }
+
 .person-card h4 {
-  color: #3b423e;
-  font-size: 1.1rem;
-  margin: 0 0 0.6rem;
-  line-height: 1.4;
+  color: #1e293b;
+  font-size: 0.975rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+  line-height: 1.35;
 }
+
 .role {
   color: #64748b;
-  font-size: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
   margin: 0;
+  line-height: 1.4;
 }
-@media (max-width: 900px) {
+
+@media (max-width: 1024px) {
   .card-row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 500px) {
+
+@media (max-width: 768px) {
+  .faculty {
+    padding: 4rem 1rem;
+  }
+
+  .card-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .person-card {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
   .card-row {
     grid-template-columns: 1fr;
   }
