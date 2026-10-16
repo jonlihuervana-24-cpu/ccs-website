@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import logoImg from '@/assets/images/css-logo.png'
+import logoImg from '@/assets/images/ccs-logo.png'
 </script>
 
 <style scoped>
@@ -28,7 +28,7 @@ import logoImg from '@/assets/images/css-logo.png'
   align-items: center;
   justify-content: center;
   padding: 6rem 3rem;
-  background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #a1aba4 0%, #ffffff 100%);
   text-align: center;
   scroll-margin-top: 100px;
 }
@@ -47,7 +47,7 @@ import logoImg from '@/assets/images/css-logo.png'
 }
 
 .hero h1 {
-  color: #14532d;
+  color: #3b423e;
   font-size: 4rem;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -69,7 +69,7 @@ import logoImg from '@/assets/images/css-logo.png'
 }
 
 .values span {
-  color: #14532d;
+  color: #3b423e;
   font-weight: 900;
   font-size: 1.3rem;
   padding: 0.8rem 1.2rem;

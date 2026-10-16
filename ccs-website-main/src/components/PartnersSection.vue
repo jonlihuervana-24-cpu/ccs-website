@@ -53,7 +53,7 @@ const partners = ref([
   font-size: 1.4rem;
 }
 h2 {
-  color: #14532d;
+  color: #3b423e;
   font-size: 3rem;
   margin: 0 0 0.5rem;
 }
@@ -92,7 +92,7 @@ h2 {
   margin-bottom: 1.5rem;
 }
 .partner-card h4 {
-  color: #14532d;
+  color: #3b423e;
   font-size: 1.3rem;
   margin: 0;
 }

@@ -62,7 +62,7 @@ import blisImg from '@/assets/images/blis.png'
   font-size: 1.4rem;
 }
 h2 {
-  color: #14532d;
+  color: #3b423e;
   font-size: 3rem;
   margin: 0 0 0.5rem;
 }
@@ -96,7 +96,7 @@ h2 {
   margin-bottom: 2rem;
 }
 .program-card h3 {
-  color: #14532d;
+  color: #3b423e;
   font-size: 1.5rem;
   margin-bottom: 1.2rem;
   line-height: 1.3;

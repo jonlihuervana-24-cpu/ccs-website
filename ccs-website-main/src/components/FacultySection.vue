@@ -85,7 +85,7 @@ const staff = ref([
 <style scoped>
 .faculty {
   padding: 6rem 3rem;
-  background: #f0fdf4;
+  background: #dfdfdf;
   scroll-margin-top: 80px;
 }
 .container {
@@ -105,7 +105,7 @@ const staff = ref([
   font-size: 1.4rem;
 }
 h2 {
-  color: #14532d;
+  color: #3b423e;
   font-size: 3rem;
   margin: 0 0 0.5rem;
 }
@@ -119,11 +119,11 @@ h2 {
   margin-bottom: 5rem;
 }
 .group-title {
-  color: #14532d;
+  color: #3b423e;
   font-size: 1.6rem;
   margin-bottom: 2.5rem;
   padding-bottom: 0.8rem;
-  border-bottom: 3px solid #dcfce7;
+  border-bottom: 3px solid #b8860b;
 }
 .card-row {
   display: grid;
@@ -152,7 +152,7 @@ h2 {
   margin-bottom: 1.5rem;
 }
 .person-card h4 {
-  color: #14532d;
+  color: #3b423e;
   font-size: 1.1rem;
   margin: 0 0 0.6rem;
   line-height: 1.4;

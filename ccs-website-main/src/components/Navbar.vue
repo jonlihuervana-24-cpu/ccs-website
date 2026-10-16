@@ -18,7 +18,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import logoImg from '@/assets/images/css-logo.png'
+import logoImg from '@/assets/images/ccs-logo.png'
 
 const isMenuOpen = ref(false)
 </script>
@@ -55,7 +55,7 @@ const isMenuOpen = ref(false)
 .brand-name {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #14532d;
+  color: #3b423e;
   white-space: nowrap;
 }
 
@@ -65,7 +65,7 @@ const isMenuOpen = ref(false)
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #14532d;
+  color: #3b423e;
   padding: 0;
 }
 
@@ -91,8 +91,8 @@ const isMenuOpen = ref(false)
 
 .nav-links a:hover,
 .nav-links a.router-link-active {
-  color: #14532d;
-  border-bottom-color: #84cc16;
+  color: #3b423e;
+  border-bottom-color: #b8860b;
 }
 
 @media (max-width: 900px) {
